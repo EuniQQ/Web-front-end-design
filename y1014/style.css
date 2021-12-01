@@ -1,0 +1,170 @@
+/* Global style */
+
+html {
+    background-color: rgb(188, 220, 251);
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 87%;
+    /* 16px  87% 13.92px 14px */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    background-color: rgb(251, 251, 251);
+    padding-left: 40px;
+    padding-right: 3em;
+    /* 3em 14px *3=42px */
+}
+
+/* Header Style */
+
+
+.heater {
+    color: rgb(250, 200, 239);
+    padding-top: 1.5em;
+    /* 1.5em=14px*1.5 */
+    padding-bottom: 1.5em;
+    font-weight:normal;
+    
+}
+
+.header-tital {
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 200%;
+}
+
+.header-tital ::after{
+    content: icon;
+}
+.header-slogan {
+    margin: 0px;
+}
+
+/* Nav Style */
+
+.nav {
+    color: rgb(142, 177, 148);
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+    }
+
+/* 第一組 ul */
+.nav-list{
+    display:flex;
+    margin:0px;
+    padding:0px;
+}
+
+/* 第一組ul li */
+.nav-list-item{
+    list-style-type: none;
+      
+}
+
+
+/* content style */
+/* 第一組 ul li a */
+.nav-list-item-link{
+    text-decoration: none;
+    color: darkgray;
+    text-align: center;
+    padding:6px 10px;
+    border:1px darkgray solid; 
+    margin:30px 
+
+}
+
+
+/* 第二組 ul none */
+.nav-sublist{
+    display:none;
+    margin:0px;
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    background:lemonchiffon;
+    min-width:20px;
+    box-shadow:0px 8px 16px 8px;
+    z-index:1;
+    list-style-type: none;
+}
+
+.nav-list-item-link:hover{
+    background-color: khaki;
+}
+
+/* 第一組li(class sub)被碰到時，第二組ul block */
+.sub:hover .nav-sublist{
+    display:block;
+}
+
+
+.nav-sublist-item{
+    list-style-type: none;
+         
+}
+
+/* ul li:hover{display: block;
+}
+ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+  } */
+
+
+  /* 第二組ul li a */
+.nav-sublist-item-link{
+    list-style-type: none;
+    text-decoration: none;
+        
+}
+.content-area {
+    display: flex;
+    /* 【css flexbox】切成兩邊的關鍵  */
+    border-top: 2px solid rgb(184, 207, 202);
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+    margin-top:5px;
+}
+
+/* Main-area Style */
+
+.main-area {
+    color: cadetblue;
+    /* padding-right:5em; */
+    padding:10px 20px;
+}
+
+/* Sidebar Style */
+
+.side-bar {
+    background-color: rgb(194, 235, 236);
+    padding: 20px 40px;
+    font-size: 85%;
+    /* 13.92px*85%=11.83px */     
+    
+}
+
+/* Footer Style */
+
+.footer {
+    color: darkgray;
+    text-align: center;
+    font-size: 85%;
+    padding-top:20px;
+    padding-bottom:20px;
+}

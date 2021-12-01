@@ -1,0 +1,56 @@
+h1{
+   /* text-align: center; */
+   }
+
+.form-group{
+    margin:10px;
+}
+
+.form-box{
+    max-width:600px;
+    margin:20px auto;
+    border-radius:10px;
+    box-shadow: 0 10px 30px darkgray ;
+    overflow:hidden;
+    padding:10px 10px;
+    margin-bottom:10px;
+}
+
+.form-header{
+    background-color:rgb(152, 219, 199);
+    color:white;
+    padding-left:10px;
+    border-radius:10px 10px 0 0;
+}
+
+.form-header-title{
+    font-size:24px;
+}
+
+.form-body{
+    padding:20px 20px;
+}
+
+.form-controller{
+    display:block;
+    width:100%;
+    /* 讓留言處滿版 */
+    font-size:16px;
+    line-height:1.5;
+    color:rgb(0, 0, 0);
+    background-color:rgb(233, 233, 233);
+    border:1px solid darkgray;
+    border-radius: 10px;
+    margin-top:10px;
+  
+}
+
+.submit-btn{
+    background:rgb(85, 84, 84);
+    border:1px solid rgb(85, 84, 84);
+    border-radius: 4px;
+    line-height:1.5;
+    color:white;
+
+}
+

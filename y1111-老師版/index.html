@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background: rgb(156, 137, 156);
+        margin: 0;
+
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        box-sizing: border-box;
+        justify-content: space-around;
+
+    }
+
+    .box {
+        /* border: 1px solid rgb(116, 100, 116); */
+        border: 1px solid white;
+        width: calc(100% / 3);
+        /* height: 300px; */
+        /* margin: 10px; */
+        padding: 50px;
+        overflow: auto;
+        background-color: white;
+        box-sizing: border-box;
+        color:rgb(80, 80, 80)
+    }
+
+    header {
+        width: 100%;
+        height: 100vh;
+        /* 100vh是滿版(目前頁面的高度) */
+        color: rgb(107, 96, 0);
+        text-align:right;
+        background-image: url('https://images.unsplash.com/photo-1622683905835-0f9a91b9b62c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80');
+        background-size: cover;
+        /* 讓圖片不會分成很多張 */
+        padding: 50px 0;
+        text-shadow:0px 3px 3px white;
+    }
+
+    @media (min-width:401px) and (max-width: 600px) {
+        .box {
+            width: 100%;
+            text-align: center;
+            color: rgb(77, 76, 76);
+        }
+
+        header{
+
+            justify-content: center;
+        }
+    }
+
+    @media (min-width:601px) and (max-width: 800px) {
+        .box {
+            width: 50%;
+            text-align: center;
+            color: rgb(77, 76, 76);
+        }
+    }
+
+
+    @media (max-width: 801px) {
+        .box {
+            width: 50%;
+            text-align: center;
+            color: rgb(77, 76, 76);
+        }
+    }
+
+    .header-content {}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>- RWD</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsuscipit!</p>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="box">
+            <img src="https://picsum.photos/200/300?grayscale" alt="" width="250px" height="150px">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos repellat, aperiam pariatur
+                perferendis
+                atque, quisquam voluptatum corrupti laboriosam in deserunt aspernatur vitae, aut quidem recusandae
+                voluptates adipisci omnis obcaecati. Accusamus adipisci magni fuga architecto distinctio voluptatibus!
+                Odio!</p>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/536/354" alt="" width="250px" height="150px">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quia placeat blanditiis expedita. Voluptas
+                dolorem harum beatae, voluptatem accusantium consequatur quisquam reprehenderit? Sint, neque a veritatis
+                ex,
+                sit quas aperiam laboriosam officia quia rerum corrupti molestiae at dolores sapiente alias! Quod,
+                quisquam
+                .</p>
+        </div>
+
+        <div class="box">
+            <img src="https://picsum.photos/seed/picsum/536/354" alt="" width="250px" height="150px">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quia placeat blanditiis expedita. Voluptas
+                dolorem harum beatae, voluptatem accusantium consequatur quisquam reprehenderit? Sint, neque a veritatis
+                ex,
+                sit quas aperiam laboriosam officia quia rerum corrupti molestiae at dolores sapiente alias! Quod,
+                quisquam
+                .</p>
+        </div>
+
+
+
+</body>
+
+</html>

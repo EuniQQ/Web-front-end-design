@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./basic.css">
+    <link rel="stylesheet" href="./style_2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <div class="form-header">
+            <h1><i class="fas fa-pen-fancy"></i>員工資料</h1>
+        </div>
+
+        <div class="form-group">
+            <label for="username"><i class="far fa-smile"></i> 姓名</label>
+            <input type="text" name="username" id="username">
+        </div>
+
+        <div class="form-group">
+            <label for="gender"><i class="fas fa-user-edit"></i> 性別</label>
+            <input type="radio" id="html" name="gender" value="1">
+            <label for="html"> 男</label>
+            <input type="radio" id="html" name="gender" value="2">
+            <label for="html"> 女</label>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="birthday"><i class="fas fa-birthday-cake"></i> 生日</label>
+            <input type="date" name="birthday" id="birthday">
+        </div>
+
+        <div class="form-group ">
+            <label for="username"><i class="fas fa-briefcase"></i> 部門</label>
+            <select name="department" id="department" class="selectInput">
+                <option value="前端">前端</option>
+                <option value="前端">後端</option>
+                <option value="前端">行銷</option>
+                <option value="前端">業務</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label for="skill"><i class="fas fa-cog"></i> 專長</label>
+            <input type="checkbox" name="skill" id="skill" value="php">
+            <label for="skill"> php</label>
+            <input type="checkbox" name="skill" id="skill" value="JavaScript">
+            <label for="skill"> JavaScript</label>
+            <input type="checkbox" name="skill" id="skill" value="css">
+            <label for="skill"> css</label>
+            <input type="checkbox" name="skill" id="skill" value="jQuery">
+            <label for="skill"> jQuery</label>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <!-- <button class="submit-btn" type="submit"><i class="far fa-paper-plane"></i></i> 送出表單</button> -->
+            <button type="button" class="btn btn-outline-secondary"><i class="far fa-paper-plane"></i> 送出表單</button>
+            <!-- <button type="button" class="btn btn-secondary">送出表單</button> -->
+        </div>
+
+
+    </div>
+</body>
+
+</html>

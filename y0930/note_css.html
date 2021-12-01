@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    【Internal CSS-內部的】
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+        #my_id {
+            color: blueviolet;
+
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body style="background-color: beige;">
+
+
+    【CSS介紹】    
+    Inline 行內 - <body>下面任何html的tag裡
+    Internal 內部的 - <head>下用<style></style> 包所有效果 
+    External 外部的 - 在<head>下面加<link>連於其他css檔
+
+    【常用CSS】    
+    color顏色 ex.color: blue;  
+    font-family: verdana;  字形
+    font-size: 300%; 大小
+    border: 2px solid powderblue; 邊框
+
+    
+    
+    <br>
+
+    【Inline CSS-行內的】
+    ex.<h1 style="color: rgb(3, 122, 67);font-size: 50px;">我是標題</h1>
+    <!-- 雖然head有設定h1標題是藍色，但是行內又指定h1為綠色時，會優先Inline CSS-->
+
+    <p>我是內容1</p>
+    <p>我是內容2</p>
+    <p>我是內容3</p>
+    <p id="my_id">我是內容5</p>
+
+    【ID用法】
+    <!-- 設id後，在head也指定id顏色 ex. #my_id{color: blueviolet;}  -->
+    <br>
+
+
+    【External CSS-外部的】
+    ex.
+    <head>
+        <link rel="stylesheet" href="./External .CSS">
+    </head>
+    <!-- rel=relationship的縮寫,stylesheet=CSS後面ss的縮寫 -->
+    <!-- 接著在External.css檔案裡編輯 -->
+
+
+    <br>
+    <hr>
+
+
+    【text-align-文字對齊】
+    <p style="text-align:center;">這是對齊</p>
+    <p style="text-align:right;">這是靠右</p>
+    <p style="text-align:left;">這是靠左</p>
+
+    <br>
+    <hr>
+
+    <!-- html中attribute(屬性)部分都是用= (ex. style=) -->
+    <!-- css的property(特性)的都是用: (ex.color: ) -->
+
+    <!-- 一段html要註解時，如果裡面其中幾行已經註解，先取消註解，再一次多註解，否則會有問題 -->
+
+
+
+
+
+
+</body>
+
+</html>

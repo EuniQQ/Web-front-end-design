@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+}
+
+/* body */
+
+.main {
+    background-color: rgb(253, 253, 253);
+    width: 1024px;
+    /* height:768px; */
+    padding: 0 12px;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main>*:not(aside, section), aside>*, section>* {
+    border: 1px solid gray;
+}
+
+/* top */
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+/* aside */
+.aside {
+    flex-basis: 215px;
+    height: calc(768px - 65px - 25px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* aside .menu */
+.menu {
+    flex-basis: calc(100% - 25px);
+    /* height: 215px; */
+  
+}
+/* aside-menu-header */
+.aside-menu-header{
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    color: #FF00FF;
+   font-weight: 500;
+   margin-bottom: 20px;
+}
+
+/* aside .menu  nav a */
+.aside>nav>a{
+    color: #000000;
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    background: url('./images/menu1.png');
+    text-align:center;
+}
+
+.aside>nav>a:hover{
+background: url('./images/menu2.png');
+}
+
+/* aside .update */
+.update {
+    flex-basis:25px;
+    /* hight:215px; */
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+}
+
+/* section */
+.section {
+    flex-basis:calc(100% - 215px);
+    display:flex;
+    flex-direction: column;
+}
+
+/*section .marquee */
+.marquee {
+    flex-basis:29px;
+    text-align:center;
+    font-size:24px;
+    color: #0000FF;
+}
+
+/*section .content */
+.content {
+    flex-basis:calc(100% - 29px);
+}
+
+/* footer */
+.footer {
+    flex-basis:1000px;
+    height:20px;
+}

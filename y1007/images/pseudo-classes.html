@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        【CSS Pseudo-classes-偽類別】
+
+        /* unvisited link-去除下底線 */
+        a:link {
+            text-decoration: none;
+        }
+
+        /* visited link-滑鼠點下去時變色 */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link-滑鼠碰到時變色 */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link -壓下去字變大(指定200%)*/
+        a:active {
+            color: blue;
+            font-size: 200%;
+        }
+
+        a:hover必須在 CSS 定義之後a:link和 a:visited中才能生效！
+        a:active必須 a:hover在 CSS 定義之後才能生效！偽類名稱不區分大小寫。
+
+        【其他常用】：
+
+        /* 點在欄位時填滿顏色 */
+        input:focus {
+            background-color: yellow;
+        }
+
+        /* 用顏色強調格子 */
+        input:read-only {
+            background-color: rgb(163, 202, 184);
+        }
+
+
+        【CSS :nth-child】
+        
+        
+        /* (可加even偶數/odd基數/列數)
+
+        Selector只有p下一層的起作用   */
+        h2:nth-child {
+            background: rgb(230, 247, 76);
+        }
+
+        p:nth-child(even) {
+            background: rgb(238, 192, 227);
+        }
+
+        p:nth-child(odd) {
+            background: rgb(192, 229, 238);
+        }
+
+        【CSS :required Selector】
+         input:required {
+            background-color: yellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h2>Styling a link depending on state</h2>
+    <!-- <b>標籤指定沒有任何額外的重要性粗體文字。 -->
+    <!-- 也可以使用以下 CSS 設置粗體文本：“font-weight: bold;”。 -->
+    <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+    <p><b><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-class_links">w3 schools</a></b>
+    </p>
+
+    <form action="">
+        <label for="fa">first name</label>
+        <input type="text" id="fa" value="">
+        <label for="fa">laster name</label>
+        <input type="text"  id="fa" value="">
+        <input type="submit" >
+
+
+        <p>123456789</p>
+        <p>123456789</p>
+        <p>123456789</p>
+        <p>123456789</p>
+        <p>123456789</p>
+        <p>123456789</p>
+        <p>123456789</p>
+
+    </form>
+</body>
+
+</html>

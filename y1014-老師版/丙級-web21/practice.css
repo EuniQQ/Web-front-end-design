@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+    /* (內容超出範圍時) */
+}
+
+/* body */
+
+.main {
+    background-color: rgb(253, 253, 253);
+    width: 1024px;
+    /* height:768px; */
+    padding: 0 12px;
+    margin: 12px;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* body內除了aside section 都要上border
+(星號代表全部，大於符號代表它的下一層)
+aside內的border (menu update)
+section內上border (marquee content) */
+
+.main>*:not(aside, section), aside>*, section>* {
+    border: 1px solid gray;
+}
+
+/* top */
+
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+/* aside */
+
+.aside {
+    flex-basis: 215px;
+    height: calc(768px - 65px - 25px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* aside .menu */
+
+.menu {
+    flex-basis: calc(100% - 25px);
+    /* 100%是指父輩的長度 */
+}
+
+/* aside .menu  header */
+
+.aside-menu-header {
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    color: #FF00FF;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* aside .menu  nav a */
+
+.aside>nav>a {
+    /* 指定aside底下nav下一層的a */
+    color: #000000;
+    /* 注意：色號一定要打對，少一個0就會吃不到 */
+    background: url('./images/menu1.png');
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#myLink {
+    text-decoration: underline;
+}
+
+.aside>nav>a:hover {
+    background: url('./images/menu2.png');
+}
+
+/* aside .update */
+
+.update {
+    flex-basis: 25px;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+}
+
+/* section */
+
+.section {
+    width: calc(1000px - 215px);
+    /* flex-basis: calc(1000px - 215px); */
+    display: flex;
+    flex-flow: column nowrap;
+    /* 方向是直的，沒有多行 */
+}
+
+/*section .marquee */
+
+.marquee {
+    flex-basis: 29px;
+    padding: 0 calc((100% - 770px - 2px)/2);
+    text-align: center;
+    font-size: 24px;
+    color: #0000FF;
+}
+
+/*section .content */
+
+.content {
+    flex-basis: calc(100% - 29px);
+    padding: 0 calc((100% - 770px - 2px)/2);
+}
+
+/* footer */
+
+.footer {
+    flex-basis: 1000px;
+    height: 20px;
+}

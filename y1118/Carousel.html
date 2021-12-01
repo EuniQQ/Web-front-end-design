@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>圖片輪播</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- 官網：https://getbootstrap.com/docs/4.6/components/carousel/ -->
+  <style>
+    /* 圖片輪播 */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <div class="container">
+
+
+    </div>
+
+    <!-- 頁面提示 -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- 頁面資料 -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./marek-piwnicki-niL96er_b24-unsplash.jpg" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="./michael-oeser-Fsnssr0vbzg-unsplash.jpg" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="./ruedi-haberli-uo4wrNY-roA-unsplash.jpg" class="d-block w-100" alt="">
+        <div class="carousel-item">
+          <h3>NEW YEAR </h3>
+          <P>We love the big apple</P>
+          <a href="#">GO</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 上下頁按鈕 -->
+    <!-- href要跟id一樣 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

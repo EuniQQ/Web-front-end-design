@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="top">HTML Forms</h2> 加入跳到頁首的
+
+    <form action="送出去要送到哪裏(哪個網頁)">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    <hi>標題</hi>
+
+
+    <h3>表單練習：</h3>
+    <form action="網頁連結">
+
+        <form action=""></form>
+        <lable for=fname> First Name:</lable> <br>
+        <input type="text" id="fname" name="fname" value="john"><br>
+
+        <p>
+            <lable for=lname> Last Name:</lable> <br>
+            <input type="text" id="lname" name="lname" value="Doe"><br>
+        </p>
+        <input type="submit" value="submit"><br>
+
+        <br><hr>
+
+
+        <H3>radio button 單選表單-範例</H3>
+
+        <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+
+        <H3>radio button 練習</H3>
+        <p>Choose your favorite color</p>
+        <p>
+            <input type="radio" id="red" name="fav_color" value="red">
+            <label for="red">RED</label>
+        </p>
+
+        <p>
+            <input type="radio" id="green" name="fav_color" value="green">
+            <label for="green">GREEN</label>
+        </p>
+
+        <p> <input type="radio" id="black" name="fav_color" value="black">
+            <label for="black">BLACK</label>
+        </p>
+
+    </form>
+
+    <br><hr>
+
+    <H3>Checkboxes 複選表單-範例</H3>
+
+    <form action="./form.html">
+
+        <input type="checkbox" id="vehicle1" name="vehicle[]" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle[]" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle[]" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+        <input type="submit" value="Submit">
+
+        <h3>Checkboxes 複選表單-練習</h3>
+<P>Choose The Color for Your Car </P>
+        <input type="checkbox" id="check1" name="check[]" value="red">
+        <label for="check1">RED</label>
+        
+        <input type="checkbox" id="check2" name="check[]" value="blue">
+        <label for="check2">BLUE</label>
+        
+        <input type="checkbox" id="check3" name="check[]" value="black">
+        <label for="check3">BLACK</label><br>
+        <input type="submit" value="submit">
+
+    </form>
+
+    <br><hr>
+
+        <h2>The select Element下拉式選單</h2>
+
+    <p>The select element defines a drop-down list:</p>
+
+    <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <input type="submit">
+    </form>
+<br>
+
+    <h3>The select Element 下拉式選單-練習</h3>
+    <form action="">
+        <select name="my_select" id="my_select">
+            <option value="book">book123</option>
+            <option value="house">hoouse123</option>
+            <option value="car">car123</option>
+        </select> 
+        
+       <p><input type="submit" value="submit"></p> 
+
+    </form>
+
+    <br><hr>
+
+    <h3>get-可以在網址上看到的資料-練習</h3>
+    <form action="" method="GET">
+        <p>
+            <label for="fname">RED</label> <br>
+            <input type="text" id="red" name="red" value="1"><br>
+        </p>
+        <p>
+            <label for="blue">BLEU</label> <br>
+            <input type="text" id="blue" name="blue" value="2">
+        </p>
+        <input type="submit" value="submit">
+
+        (送出後網址 http://127.0.0.1:5500/getpractice.html?red=1&blue=2)
+
+    </form>
+
+
+    <br><br><br>
+
+    <a href="#top">top</a> 跳到頁首
+
+
+
+</body>
+
+</html>

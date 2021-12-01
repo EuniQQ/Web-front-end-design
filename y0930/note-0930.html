@@ -1,0 +1,153 @@
+*圈選後)ctrl+/ 註解 (HTML comment) 
+*ctrl+左鍵可一次大量選取
+*element=元素
+*form表單的雷：註解了上面沒有註解到下面，因為是一大段的。可以把整個form摺疊起來再一次註解
+*如果要註解裡已有註解的會有問題，要分別註解
+*每個form是個別的，form裡面不會包form
+
+<br><br>
+
+【表格框線】
+<table border="2px" width="600或80%"></table>
+*反紅字是因為比較少用html做框線，通常用css
+
+attribute 屬性
+a tag =Attributes 屬性 
+<a href=""></a>
+
+【快速選取文件內同字】:
+1 壓ctrl+左鍵一個一個點
+2 在該字中間點2下左鍵後，按ctrl+D,ctrl長按不放,按幾次D就選幾個
+
+
+一般取名index.html 當作首頁
+打字全部中英文都用半形，不用全形
+好習慣】程式碼一定要寫註解，給自己看才看得懂
+
+alt+上下左右 移動
+
+<br><br>
+【填入式表格Text Fields】 HTML Form
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+
+<form>tag 是有內容的，有頭有尾(要成對
+    form action="送出去要送到哪裏(哪個網頁)"
+    
+    for="fname" 點字的時候會讓他在表格裡可以打字
+    **for跟id要一樣，label的for對到id就可以點字跳到選格**
+    
+    type="text" 指文字方塊類型
+    value="John" 預設出現的內容
+    type="submit" 送出鍵
+    
+    一個表單配一個submit
+    name 跟id通常會設一樣內容
+    name 告訴後端這是甚麼(ex紅色衣服)
+
+<br><br>
+
+【Radio Buttons單選表單】<br>
+<form>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+</form>
+
+<br><br>
+**Radio Buttons單選表單中，name的內容取名一樣才能單選，否則變成複選**
+如果action空白，資料就會送在同一面
+<br><br>
+
+【Checkboxes複選表單】<br>
+<form action="/action_page.php">
+    <input type="checkbox" id="vehicle1" name="vehicle[]" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle[]" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle[]" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br><br>
+複選表單的name後面會打中括號:用同樣名稱+[]
+id是獨一無二的，不能重複，不能跟name一樣
+
+name取一樣：興趣[]， 後端收到-興趣(打球、看書、爬山)
+name取三種：興趣1[]/興趣2[]/興趣3[]， 後端收到-興趣1：打球/興趣2：看書/興趣3：爬山
+
+
+
+【GET】
+get-可以在網址上看到的資料
+<form action="" method="GET"></form> 
+method-方法
+method：get -公開
+method：post-隱密
+
+
+
+【The select Element 下拉式選單】
+<h2>The select Element</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form action="/action_page.php">
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars">
+        <option value="volvo">Volvo55688</option>
+        <option value="saab">Saab55688</option>
+        <option value="fiat">Fiat55688</option>
+        <option value="audi">Audi55688</option>
+    </select>
+    <input type="submit">
+</form>
+
+
+<br><BR><BR>
+option=選項
+表單選項是白字value55688，但系統收到的是value設定的
+(白字是給使用者看，value是給後台處理的人看的)
+按shift+ctrl可選一整排
+
+
+【Text Alignment文字對齊方式】-HTML Style
+text-align:center 置中
+text-align:left 靠左
+text-align:right 靠右
+ex <h1 style="text-align:center中央/left左/right右;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p>
+
+
+【字體變化】-HTML STYLE
+顏色：<p style="color:rgb(3, 138, 10);">I am red</p>
+尺寸：<p style="font-size:50px;">I am big</p>
+背景色:
+
+<body style="background-color:rgb(190, 239, 255)">I am blue</p>
+
+
+
+
+【Get 結果出現於網址】HTML Reference-Methods/PHP Superglobal
+    ex <form action="" method="GET"></form>
+    <label for="fname">RED</label> <br>
+    <input type="text" id="red" name="red" value="1"><br>
+    <label for="blue">BLEU</label> <br>
+    <input type="text" id="blue" name="blue" value="2">
+    <input type="submit" value="submit">
+
+    method:方式
+    (送出後的網址 http://127.0.0.1:5500/getpractice.html?red=1&blue=2)
+    red=1&blue=2 (name-red,value-1)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+        #box1 {
+          background-color: rgb(250, 242, 242);
+          width: 300px;
+          border: 15px solid rgb(128, 77, 0);
+          padding: 50px;
+          margin: 50px 20px;
+        }
+
+        #box2 {
+          background-color: rgb(243, 252, 255);
+          width: 300px;
+          border: 15px solid rgb(93, 122, 253);
+          padding: 50px;
+          margin: 20px;
+        }
+
+        /* 兩個box設margin時，box1 margin-bottom:50px,box2 margin-top:20px時，兩個box中間的間距不會是50+20px，系統會取最大值(50px) */
+        </style>
+        </head>
+        <body>
+        
+        <h2>Demonstrating the Box Model</h2>
+        
+        <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+        
+        <div id="box1">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+        <div id="box2">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        
+        </body>
+</html>

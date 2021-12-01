@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="">解程式遇到困難參考網站：https://stackoverflow.com/</a>  
+      
+w3schools html (網頁搜尋)老師習慣的線上教材
+
+【自動排版】alt+shift+f 
+【存檔】ctrl+s 
+
+【逐排講解】
+<!DOCTYPE html>意思是宣告這是一個檔案
+head-title 後放標題
+body 後放內容
+ctrl+shift+數字=調整字的大小
+【常用的設定】上網找VS code >setting json
+
+【並排畫面】windows鍵+上下左右鍵
+預覽頁按f12可以看到整個過程紀錄
+
+【標題】
+h1~h6+tab 從大到小調整標題字體大小
+h+tab 打標題  ex. 
+h是heading的縮寫
+<h1>This is a Heading</h1> h1>h3 = 字體大>小
+<h2>This is a Heading</h2>
+<h3>This is a Heading</h3>
+
+p+tab 打內容  ex.<p>This is a paragraph.</p>
+lorem+數字+enter 就會產生假資料的字數
+br+tab 隔一行，連續打好幾個，就會隔很多行
+
+【插入圖片】-HTML Basic
+img+tab 插入圖片(src=source來源，ait=替代，圖沒出現時出現替代文字)
+ex <img src="圖片位置(用./+tab可選擇圖的位置)" alt="child">
+<img src="./mc4ivkwyB3LqdFzlGaND-1000x1429.jpg" alt="child" width="104" height="142">
+
+【超連結】
+a+tab >> <a href="連結">打要顯示的文字</a>
+href：h是http縮寫，ref=reference參考
+
+
+【快速連結-跳到top】 HTML Links 
+a tag錨點，在頁面的標題插入id，接著在頁尾加上top
+ex標題：<h1 id="#top">This is a planning</h1> 
+  頁尾：<a href="#top">top</a>
+  也可插入連結至另一處的top<a href="html_demo.html#top">top</a>
+  #是id的意思
+
+
+
+【字形變化】-HTML Formatting
+<p><b>這是粗體</b></p>
+<p><i>這是斜體</i></p>
+<p>這是<sub> 這是下標subscript</sub> and <sup>這是上標superscript</sup></p>
+
+【分隔線】HTML Editors
+hr+tab 橫線 <hr>
+
+fake immage 假圖片網站
+
+
+ol>li*4  (有序數分成四行) 
+ul>li*3  (無序數分成三行)
+
+<!-- <ol>有序數的</ol> -->
+ex<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+  </ol>
+  50.Coffee
+  51.Tea
+  52.Milk
+
+<!-- <ul>無序數的</ul>   -->
+  <ul>what do you want?
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+  </ul> 
+
+
+
+
+
+【絕對路徑】:
+
+
+【相對路徑】:
+一個點是同一層，兩個點是上一層
+<img src="./images/01.jpg" alt=""><br> 用同一層資料夾裡的圖片
+<img src="images/01.jpg" alt=""><br> 跟上面是一樣的(縮寫)
+<img src="../images/01.jpg" alt=""><br> 用image上一層的圖片
+
+<img src="../../images/01.jpg" alt=""><br> 用上上層(兩個./當一層)
+<img src="images/01.jpg" alt="">
+
+
+
+【表格】HTML Tables：
+程式語言的表格是先橫(tr+tab)的再直的(td+tab)
+<table border="1px" width="80%">
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+</tr><tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+</table>
+合併橫的colspan ex.<td colspan="2">4</td> 從4往右共2格都合併(被合併邊改成註解，不要刪掉)
+合併直的rowspan ex.<td rowspan="3">1</td> 從1往下共3行都合併
+
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Global style */
+
+html {
+    background-color: rgb(188, 220, 251);
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 87%;
+    /* 16px  87% 13.92px 14px */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: rgb(251, 251, 251);
+    padding-left: 40px;
+    padding-right: 3em;
+    /* 3em 14px *3=42px */
+}
+
+/* Header Style */
+
+.heater {
+    color: rgb(250, 200, 239);
+    padding-top: 1.5em;
+    /* 1.5em=14px*1.5 */
+    padding-bottom: 1.5em;
+    font-weight:normal;
+}
+
+.header-tital {
+    margin: 0;
+    font-weight: normal;
+    font-size: 165%;
+}
+
+.header-slogan {
+    margin: 0;
+}
+
+/* Nav Style */
+
+.nav {
+    color: darkolivegreen;
+}
+
+/* content style */
+
+.content-area {
+    display: flex;
+    /* 【css flexbox】切成兩邊的關鍵  */
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    padding: 7px;
+}
+
+/* Main-area Style */
+
+.main-area {
+    color: cadetblue;
+    padding-right:3em;
+}
+
+/* Sidebar Style */
+
+.side-bar {
+    background-color: rgb(181, 215, 216);
+    padding: 30px 40px;
+    font-size: 85%;
+    /* 13.92px*85%=11.83px */
+       
+    
+}
+
+/* Footer Style */
+
+.footer {
+    color: darkgray;
+    text-align: center;
+    font-size: 85%;
+    padding-top:20px;
+    padding-bottom:20px;
+}

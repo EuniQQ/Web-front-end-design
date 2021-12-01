@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+}
+
+/* body */
+
+.main {
+    background-color: lightblue;
+    width: 1024px;
+    /* height:768px; */
+    padding: 10px;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main>*:not(aside, section), aside>*, section>* {
+    border: 1px solid gray;
+}
+
+/* top */
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+/* aside */
+.aside {
+    flex-basis: 215px;
+    height: calc(768px - 65px - 25px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* aside .menu */
+.menu {
+    flex-basis: calc(100% - 25px);
+    /* height: 215px; */
+}
+
+/* aside .update */
+.update {
+    flex-basis:25px;
+    /* hight:215px; */
+}
+
+/* section */
+.section {
+    flex-basis:calc(100% - 215px);
+    /* height:calc(768px - 65px - 20px); */
+    display:flex;
+    flex-direction: column;
+}
+
+/* marquee */
+.marqee {
+    flex-basis:29px;
+}
+
+/* content */
+.content {
+    flex-basis:calc(100% - 29px);
+}
+
+/* footer */
+.footer {
+    flex-basis:1000px;
+    height:20px;
+}

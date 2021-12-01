@@ -1,0 +1,54 @@
+stackoverflow (網頁搜尋)+ 解程式遇到困難      
+w3schools html (網頁搜尋)老師習慣的線上教材
+alt+shift+f 自動排版
+
+逐排講解：
+<!DOCTYPE html>意思是宣告這是一個檔案
+head-title 後放標題
+body 後放內容
+ctrl+shift+數字=調整字的大小
+上網找VS code >setting json--常用的設定
+
+hello world 是最簡單的程式語言
+hello world wiki
+
+windows+上下左右鍵，可設為並排畫面
+
+h+tab 打標題 ex. <h1>This is a Heading</h1>
+h是heading的縮寫
+
+p+tab 打內容 ex.<p>This is a paragraph.</p>
+a+tab 打超連結
+lorem+數字 產生假資料的字數
+br+tab 隔一行，可打一整排，就會隔很多行
+img+tab 插入圖片(src=source來源，)
+/+tab可選擇圖
+
+下午課程：
+A+tab href：(再找跳到top)
+fake immage 假圖片網站
+hr+tab 橫線
+
+ol+tab 
+ol>li*4  (有序數分成四行) 
+ul>li*3  (無序數分成三行)
+預覽頁按f12可以看到整個過程紀錄
+
+【絕對路徑】:
+
+
+【相對路徑】:
+一個點是同一層，兩個點是上一層
+<img src="./images/01.jpg" alt=""><br> 用同一層資料夾裡的圖片
+    <img src="images/01.jpg" alt=""><br> 跟上面是一樣的(縮寫)
+    <img src="../images/01.jpg" alt=""><br> 用image上一層的圖片
+
+    <img src="../../images/01.jpg" alt=""><br> 用上上層(兩個./當一層)
+    <img src="images/01.jpg" alt="">
+
+
+
+HTML Tables：
+程式語言的表格是先橫(tr+tab)的再直的(td+tab)
+合併橫的colspan
+合併直的rowspan

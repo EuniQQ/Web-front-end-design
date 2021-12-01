@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+    /* (內容超出範圍時) */
+}
+
+.main {
+    background-color: lightblue;
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* body內除了aside section 都要上border */
+
+/* aside內的border (menu update) */
+
+/* section內上border (marquee content) */
+
+body>*:not(aside, section), aside>*, section>* {
+    border: 1px solid lightslategray;
+}
+
+/* .top */
+
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+.top>a {
+    display: block
+}
+
+/* aside */
+
+.aside {
+    /* flex-direction- 定義主軸
+    flex-basis是次軸長度
+    height=column/主軸長度
+    此時是column，width是次軸 */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 215px;
+    height: calc(768px - 65px - 20px);
+    border:5px solid lightgray;
+}
+
+/* aside .menu */
+.menu {
+    /* 對於元件basis是主軸長度 */
+    flex-basis: calc(100% - 25px);
+    height: 65px;
+}
+
+/* aside .menu */
+
+.update {
+    flex-basis: 25px;
+}
+
+/* section */
+
+.section {
+    width: calc(1000px - 215px);
+    /* flex-basis: calc(1000px - 215px); */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.marquee {
+    flex-basis: 29px;
+    padding: 0 calc((100% - 770px - 2px)/2);
+}
+/* 100%是指父輩的長度 */
+
+.content {
+    flex-basis: calc(100% - 29px);
+    padding: calc((100% - 770px -2px)/2);
+}
+
+.footer {
+    flex-basis: 1000px;
+    height: 20px;
+    color: black;
+}
