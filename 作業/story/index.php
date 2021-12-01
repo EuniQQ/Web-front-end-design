@@ -65,12 +65,12 @@ $data=[
 
 <?php
  
-
  if(isset($_GET['page'])){
     $page=$_GET['page'];
     $i=$page-1;
 }else{
-    $page==1;
+    $page=1;
+    $i= 1;
 }
 
 $lastPage=$page-1;
@@ -101,7 +101,7 @@ if(isset($_GET['language'])){
     <div class="rowBox  d-flex  justify-content-between  align-items-end text-center " > -->
     <div class="rowBox  d-flex  justify-content-between  align-items-center text-center " >
 <!-- 上一頁連結 -->
-        <a href="index.php?page=<?=$lastPage;?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
+        <a href="index.php?page=<?=$lastPage;?>&language=<?=$language?>" class="fas fa-angle-left fa-5x" style='color:gray'  role="button"></a>
         <div class="col-sm-12 d-inline-block">
 <!-- 圖片 -->
                 <img class="img-fluid mx-auto background-size:no-repeat shadow mt-3" src="<?= $data[$i]['scr']?>" alt="作品集1" width="1000px" >
@@ -118,7 +118,7 @@ if(isset($_GET['language'])){
         </div>
 
 <!-- 下一頁連結 -->
-        <a href="index.php?page=<?=$nextPage;?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
+        <a href="index.php?page=<?=$nextPage;?>&language=<?=$language?>" class="fas fa-angle-right fa-5x" style='color:gray' role="button"></a> 
    
       </div>
     
