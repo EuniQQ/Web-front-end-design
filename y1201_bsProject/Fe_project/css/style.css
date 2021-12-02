@@ -14,11 +14,44 @@ body{
 
 .box1:hover{
     background:white;
-    box-shadow:0px 20px 20px rgb(54, 54, 54);
+    box-shadow:0px 20px 20px rgb(107, 107, 107);
 }
 
 .box2{
     background-color:white;
     text-align:center;
     color:gray;
+}
+
+#image1{
+    background-image: url(https://picsum.photos/id/101/200/300);
+}
+
+#image2{
+    background-image: url(https://picsum.photos/id/102/200/300);
+}
+
+#image3{
+    background-image: url(https://picsum.photos/id/1032/200/300);
+}
+
+.gbox{
+    height:250px;
+    background-size:cover;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.line{
+    width:40px;
+    height:6px;
+    border-radius:3px;
+    margin:10px auto;
+    transition:all 1s ease;
+}
+
+.box1:hover .line{
+    width:120px;
 }
