@@ -1,0 +1,17 @@
+.text-primary{
+    color:red;
+}
+
+.bg-warning{
+    background: rgb(162, 243, 212);
+}
+
+.bg-primary {
+    background-color: #9cc3ec!important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #c135c3;
+    border-color: #ffc107;
+}
