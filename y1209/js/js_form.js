@@ -18,7 +18,6 @@ const result = document.getElementById("resultOutput");
 const result = document.getElementById("discount");
 
 
-
 //get form
 form.addEventListener("submit", function (e) {
     console.log(e);

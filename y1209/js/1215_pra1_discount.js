@@ -13,10 +13,10 @@
 //const是常數不會變
 //宣告：
 const form = document.getElementById("myForm");
-const num1 = document.getElementById("originPrice");
-const num2 = document.getElementById("discount");
-const option = document.getElementById("cashDiscountPrice");
-const result = document.getElementById("resultOutput");
+const originPrice = document.getElementById("originPrice");
+const discount = document.getElementById("discount");
+const cashDiscountPrice = document.getElementById("cashDiscountPrice");
+const resultOutput = document.getElementById("resultOutput");
 
 
 //get form
@@ -33,25 +33,25 @@ form.addEventListener("submit", function(e){
     console.log(parseOriginPrice);
     
     //1.2折扣
-    parseDiscount = parseFloat(discount.value / 100);   //Float=浮點數
+    parseDiscount = parseFloat(discount.value / 100);   
     console.log(parseDiscount);
 
     //1.3現金折抵
-    cashDiscountPrice = parseInt(cashDiscountPrice.value);
-    console.log(cashDiscountPrice);
+    cashDiscountPrice = parseInt(cashDiscount.value);
+    console.log(cashDiscountPrice);  
 
 
     //全部的折扣=折扣+現金折抵
     let discountAll = 0 ;
     
-    //消費>500
+    //消費>500 79折/88折 =>0.79 / 0.88
     if(parseOriginPrice >= 500){
         discountAll = parseOriginPrice *(1-parseDiscount);
     }
     
     //>200現金折抵
     if(parseOriginPrice * parseDiscount >= 100){
-        discountAll = discountAll + cashDiscountPrice
+        discountAll = discountAll + cashDiscountPrice;
     }
     
     console.log(discountAll);
