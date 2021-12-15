@@ -14,6 +14,8 @@ const form = document.getElementById("myForm");
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const option = document.getElementById("option");
+const result = document.getElementById("resultOutput");
+const result = document.getElementById("discount");
 
 
 
@@ -31,31 +33,50 @@ form.addEventListener("submit", function (e) {
 
     //switch
 console.log(typeof(option.value));
+let total="";
 switch(option.value){
     case "+":
-        alert(parseIntNum1 + parseIntNum2);
+        total=parseIntNum1 + parseIntNum2;
         break;
 
     case "-":
-            alert(parseIntNum1 - parseIntNum2);
+        let tempNum;
+            if (parseIntNum2 > parseIntNum1){
+            tempNum = parseIntNum1;
+            parseIntNum1 = parseIntNum2;
+            parseIntNum2 = tempNum;
+            }
+            total = parseIntNum1 - parseIntNum2;
             break;
 
     case "*":
-            alert(parseIntNum1 * parseIntNum2);
-            break;
+        let discount;
+        if(parseIntNum1>500){
+            parseIntNum2 = parseIntNum1 * 0.79;
+            
+        }else if(parseIntNum1>200){
+            option = -100; 
+        }
 
-    case "/":
-            alert(parseIntNum1 / parseIntNum2);
-            break;
+        total = parseIntNum1 + parseIntNum2 + option
+        break;
 
     default:
         alert("default");
         break;
 
 }
+
+
+    alert(parseIntNum1 + parseIntNum2);
+    discount.innerText="result:" + total;
     //switch end
 
 });
+
+
+
+
 
 
 //get num1
@@ -77,3 +98,16 @@ console.log(typeof (option));
     //  homework:
     //  1.show bs alert / p / Text
     //  2.num2 >num1 時，兩值交換 
+
+  
+//課堂練習
+// 1. input : 1.1總價  1.2折扣  1.3現金折抵(1-100)
+// 2.result 
+
+// 1000 * 0.79 - 100
+// 790
+// 100
+
+// 3.>500才能用1.2(折扣)
+// 4.>200
+
