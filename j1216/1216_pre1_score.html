@@ -22,8 +22,9 @@
                 <div class="form-group">
                     <label for="">國文：</label>
                     <input type="text" class="form-control" id="Chinese" placeholder="Chinese score" name="Chinese"
-                        min="0" max="100">
+                        min="0" max="100" >
                     <!-- min="0" max="100" 最小輸入0，最大輸入100 -->
+                    <!-- 若是用form表單送出，可在input tag最後打(require)強制必須填內容才能summit -->
                 </div>
             </div>
 
@@ -57,7 +58,7 @@
     <div class="row">
         <div class=" col-12 ">
             <div class="form-group">
-                <button class="btn btn-primary btn-block mt-3" type="submit" value="submit" id="btn2">btn2</button>
+                <button class="btn btn-primary btn-block mt-3" type="reset" value="reset" id="resetBtn">reset</button>
             </div>
         </div>
     </div>

@@ -12,20 +12,33 @@ const EnglishInput = document.getElementById("English");
 const MathInput = document.getElementById("Math");
 const submitInput = document.getElementById("submitBtn");
 const form = document.getElementById("myForm");
-const btn2Input = document.getElementById("btn2");
+const resetBtnInput = document.getElementById("resetBtn");
 const resultDiv = document.getElementById("result");
 
 
-
-
+resetBtnInput.addEventListener("click",function(e) {  
+    ChineseInput.value = 0;
+    EnglishInput.value = 0;
+    MathInput.value = 0;
+    resultDiv.innertext = "";
+});
 
 //input的方法()
 submitInput.addEventListener("click",function(e) {  
     //送出件是用button，所以第一個參數是click,不是submit,form才有submit
+    //confirm("是否確定送出表單？");   
+    //送出時會跳出確認提示
+    
+    if(!confirm("submit?")){
+        //意思是不要submit就取消
+        return false; 
+    }
 
     e.preventDefault();
     console.log("submitInput is clicked");  
-
+    typeof(ChineseInput.value);
+    console.log(ChineseInput.value);
+    
 //平均分數
 const Chinese = parseInt(ChineseInput.value);
 const English = parseInt(EnglishInput.value);
