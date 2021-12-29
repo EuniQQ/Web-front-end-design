@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>jQuery no bootstrap</h1>
+        <p id="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam ea eum nisi voluptatem nemo
+            similique ipsam vel aut odit!</p>
+        <p id="blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, adipisci.</p>
+
+        <div class="card bg-warning" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="title">珍奶</h5>
+                <input type="number" name="" id="">
+                <p class="card-text" data-price="20">25</p>
+                <!-- data-price隱藏起來但是console.log會得到 -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <button class="btn btn-light  btn-block" id="change">change</button>
+            </div>
+        </div>
+
+        <div class="card bg-info" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="title">滷味</h5>
+                <input type="number" name="" id="">
+                <p class="card-text" data-price="60">80</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <button class="btn btn-light  btn-block" id="change">change</button>
+            </div>
+        </div>
+
+        <div class="card bg-danger" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h5 class="title">雞排</h5>
+                <input type="number" name="" id="">
+                <p class="card-text" data-price="15">55</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <button class="btn btn-light btn-block" id="change">change</button>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-warning">
+                <p>今日買一送一</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('button').click(function () {
+
+                //siblings--找同一層
+                $(this).attr('class','btn btn-primary btn-lg')
+                $(this).siblings(".title").addClass('text-white');
+                $(this).siblings("p").addClass('text-seocndary');
+                data=$(this).siblings('p').first.data('discount');
+                discountPrice=$(this).siblings('p').first().text();
+                price=$(this).siblings('p')
+                if(data==1){
+                    //alert('今天買一送一');
+                    $('#result').text(dataTile + "原價" + price + "元");
+                }
+
+
+
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>
