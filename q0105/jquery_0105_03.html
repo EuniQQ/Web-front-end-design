@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="">title</h3>
+    <p class="hold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, natus.</span>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 my-3">
+                <button id="appendBtn">appendBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="removeAppendBtn">removeAppendBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="prependBtn">prependBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="removePrependBtn">removePrependBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="afterBtn">afterBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="removeAfterBtn">removeAfterBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="beforeBtn">beforeBtn</button>
+            </div>
+
+            <div class="col-6  my-3">
+                <button id="removeBeforeBtn">removeBeforeBtn</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis neque quisquam eaque ratione
+                obcaecati atque ducimus voluptates aliquam ipsa odio?</li>
+        </ul>
+    </div>
+
+
+    <!-- 先載入 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- 先載入 END-->
+
+
+    <script>
+        $(document).ready(function () {
+            //append vs prepend (內部插入)
+            $('p').last().append('<span>hello！hello！hello！</span>');
+
+            $('#appendBtn').on('click', function () {
+                console.log("appendBtn ok");
+                $('p').last().append('<span>append append append append append</span>');
+                //在p的最後一行後面加上句子
+                $('ul').append('<li>append li append li append li</li>');
+            });
+
+            $('#removeAppendBtn').on('click', function () {
+                $('p').last().remove();
+                $('li').last().remove();
+            });
+
+            $('#prependBtn').on('click', function () {
+                console.log("prependBtn ok");
+                $('p').first().prepend('<span>prepend prepend prepend prepend prepend</span>');
+            });
+
+            $('#removePrependBtn').on('click', function () {
+                $('p').first().remove();
+            });
+
+            //after vs before (外部插入)
+
+            $('#afterBtn').on('click', function () {
+                console.log("afterBtn ok");
+                // $('p').last().append('<span>after after after after after</span>');
+                // $('ul').after('<ol><li>after li after li after li</li></ol>');
+                myText = '55688';
+                data = 
+                `'<tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>'`;
+            });
+
+            $('#removeAfterBtn').on('click', function () {
+                $('p').last().remove();
+            });
+
+            $('#beforeBtn').on('click', function () {
+                console.log("beforeBtn ok");
+                $('p').last().append('<span>before before before before before</span>');
+
+            });
+
+            $('#removeBeforeBtn').on('click', function () {
+                $('p').last().remove();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
