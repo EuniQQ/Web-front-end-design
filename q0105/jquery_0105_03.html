@@ -103,19 +103,35 @@
             });
 
             //after vs before (外部插入)
-
             $('#afterBtn').on('click', function () {
                 console.log("afterBtn ok");
                 // $('p').last().append('<span>after after after after after</span>');
                 // $('ul').after('<ol><li>after li after li after li</li></ol>');
                 myText = '55688';
-                data = 
-                `'<tr>
+                
+                data = `
+                <ol>
+                <li>first ${myText} li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error nisi omnis dignissimos
+                labore consequatur. Temporibus libero reiciendis at reprehenderit.</li>
+                </ol>
+                `;
+                $('ul').after(data);
+                
+                dataTr = 
+                `<tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
-                </tr>'`;
+                </tr>`;
+
+                lastTr = $('tr').last();
+                cloneTr = lastTr.clone();
+                lastTr.after(cloneTr);
+
+                lastTrNew = $('tr').last();
+                lastTrNew.find('td').empty();
+                lastTrNew.find('td').append('55688');
             });
 
             $('#removeAfterBtn').on('click', function () {
@@ -131,6 +147,16 @@
             $('#removeBeforeBtn').on('click', function () {
                 $('p').last().remove();
             });
+
+            // remove
+            // lastTrNew.find('td').remove();
+            // 所有td都刪除
+
+            // empty
+            // lastTrNew.find('td').empty();
+            // 所有子節點
+            // 把所有td 內容清空
+            // lastTrNew.find('td').empty(); 
 
         });
 
