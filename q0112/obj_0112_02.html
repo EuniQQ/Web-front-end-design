@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>salary</th>
+                <th>bonus</th>
+                <th>project</th>
+                <th>bonus*project</th>
+                <th>sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 內容用JQ繞出來 -->
+        </tbody>
+    </table>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+    <script>
+        //建立
+        //name =>amy bob cat
+        //salary=>50000.60000.70000
+        //project=>[a,b],[b,c],[d,e]
+
+        $(document).ready(function () {
+
+            const data = [
+                {
+                    "id": 1,
+                    "name": "amy",
+                    "address": "新北市xxxx",
+                    "mobile": "0911-123-123",
+                    "salary": 50000,
+                    "bonus": 1000,
+                    "project": ['a', 'b']
+                },
+                {
+                    "id": 2,
+                    "name": "bob",
+                    "address": "新北市xxxx",
+                    "mobile": "0911-000-000",
+                    "salary": 60000,
+                    "bonus": 10000,
+                    "project": ['b', 'c']
+                },
+                {
+                    "id": 3,
+                    "name": "cat",
+                    "address": "新北市xxxx",
+                    "mobile": "0911-555-555",
+                    "salary": 50000,
+                    "bonus": 100000,
+                    "project": ['a', 'b']
+                }
+            ]
+
+
+            console.log(data[0].name + '薪水是' + data[0].salary)
+            console.log(data[1].name + '薪水是' + data[1].salary)
+            console.log(data[2].name + '薪水是' + data[2].salary)
+
+            // js的迴圈寫法:(data要在上面)
+            
+            // for (let i = 0; i < array.length; i++) {
+            //     str = i + "is" + myArr[i];
+            //     console.log('i')
+            // }
+
+
+            // for
+            for (let i = 0; i <3; i++) {
+
+                projectLength=data[i].project.length
+                
+                projectLengthString = " ";
+                for (let j = 0 ; j < projectLength ; j++){
+                projectLengthString = projectLengthString + ' ' + data[i].project[j];
+                }
+
+                data[i].bxp = data[i].bonus * data[i].project.length;
+                data[i].sum = data[i].bxp + data[i].salary 
+
+                dataString=`data[${i}]`;
+                console.log(dataString,data[i]);
+
+                console.log('projectLengthString',projectLengthString);
+
+                // code
+                tbodyString = `
+            <tr>
+            <td>${data[i].id}</td>
+            <td>${data[i].name}</td>
+            <td>${data[i].salary}</td>
+            <td>${data[i].bonus}</td>
+            <td>
+                ${projectLengthString}
+            </td>
+            <td>${data[i].bxp}</td>
+            <td>${data[i].sum}</td>
+            </tr>
+            `;
+
+                $('tbody').append(tbodyString);
+                // code end
+            }
+            // for end
+
+            //總共要發多少薪水
+            // 寫法一；
+            var total=0;
+            for(let i =0 ; i<data.length ; i++){
+                total = data[i].sum;
+            }
+            console.log ('total',total);
+            
+            // 寫法二；
+            //使用 js reduce()
+            totalArr=[
+                data[0].sum,
+                data[1].sum,
+                data[2].sum,   
+            ]
+            total=totalArr.reduce(getSum,0);
+            function getSum(total,num){
+                return total + num;
+            }
+            console.log('total',total);
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
