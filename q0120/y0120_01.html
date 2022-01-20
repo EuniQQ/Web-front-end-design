@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        span {
+            color: red;
+        }
+
+        #pFade {
+            display: none;
+        }
+
+        .box {
+            background-color: lightblue;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, fugiat.</p>
+            </div>
+            <!-- button要記得加type -->
+            <!-- show  / hide  toggle -->
+            <div class="col-4">
+                <button type="button" id="hideBtn">hide button</button>
+            </div>
+
+            <div class="col-4">
+                <button type="button" id="showBtn">show button</button>
+            </div>
+
+
+            <div class="col-4">
+                <button type="button" id="toggleBtn">toggle button</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- fadeIn 淡入 / fadeIn淡出 / fadeToggle -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p id="pFade">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, sed!loremfa-rotate
+                    Lorem
+                    ipsum dolorsit amet consectetur adipisicing elit. Fugit in vitae soluta. Ex, laudantium. Deserunt,
+                    dolore
+                    similiqueomnis repellat eligendi, molestiae voluptatum sit, provident ad culpa minus aspernatur
+                    reiciendis
+                    nullavitae iure quae eos obcaecati quaerat. Quaerat aut magnam repellat corrupti aliquam
+                    consectetur,
+                    sequiquasisint eius, numquam veniam laborum tempore similique quibusdam! Necessitatibus, culpa.
+                    Veniam qui,
+                    quaerat.</p>
+            </div>
+            <div class="col-3">
+                <button type="button" id="fadeInBtn">fadeInBtn</button>
+            </div>
+
+            <div class="col-3">
+                <button type="button" id="fadeOutBtn">fadeOutBtn</button>
+            </div>
+
+            <div class="col-3">
+                <button type="button" id="toggleBtn2">toggle button</button>
+            </div>
+
+            <div class="col-3">
+                <button type="button" id="fadeToBtn">fadeToBtn</button>
+            </div>
+
+            <!-- slide Toggle-->
+            <ul>
+                <dt>Slide Toggle</dt>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <hr>
+    <!-- animate -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, nam?</p>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <button type="button" id="animateBtn">animateBtn</button>
+            </div>
+
+            <div class="col-3">
+                <button type="button" id="stopBtn">stopBtn</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- callback -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p id="callbackP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non illum natus quo sunt
+                    facere placeat est in, dignissimos nemo fuga atque ipsum reprehenderit incidunt. Quo soluta deserunt
+                    veniam dolor? Quidem, provident. Architecto magnam voluptates soluta sequi beatae vitae quam
+                    necessitatibus!</p>
+            </div>
+            <div class="col-3">
+                <button type="button" id="callbackBtn">callbackBtn</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bs4載入slim檔 缺少ajax及effects，無法做動畫，要改載min檔 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <br><br>
+    <script>
+        $(document).ready(function () {
+            $('p').click(function () {
+                $('p').hide();
+            });
+
+            $("#hideBtn").click(function () {
+                $('p').hide();
+            });
+
+            $("#showBtn").click(function () {
+                $('p').show();
+            });
+
+            $("#toggleBtn").click(function () {
+                $('p').toggle();
+            });
+
+
+            // 淡入
+            $('#fadeInBtn').click(function () {
+                // $("#pFade").fadeIn();     //寫法一
+                $("#pFade").fadeIn('2000');  //寫法二:加上時間，2000=2s
+            });
+            // 淡出
+            $('#fadeOutBtn').click(function () {
+                $("#pFade").fadeOut();
+            });
+            // 淡入 + 淡出
+            $("#toggleBtn2").click(function () {
+                $('#pFade').fadeToggle();
+            });
+
+            // 半透明
+            $('#fadeToBtn').click(function () {
+                $("#pFade").fadeTo("slow", 0.5);
+            });
+
+            // slideToggle
+            $('ul').click(() => {  //箭頭函式簡寫
+                console.log('ul');
+                $('li').slideToggle;
+            });
+
+            // animate
+            $('#animateBtn').click(() => {
+                $('.box').animate(
+                    //第一個參數放 css屬性
+                    //第二個參數放 時間
+                    // { height:"1000px" },5000  //5s
+                    {
+                        width: '1000px',
+                        'font-size': '30px',
+                        'color': 'red', //沒反應@@
+                    }, 3000
+                );
+            });
+
+            $('#stopBtn').click(() => {
+                $('.box').stop();
+            });
+
+            //callback
+            //callbackBtn -> p hide ->alert('hello callback')
+            //寫法一：
+            // $('#callbackBtn').click(()=>{
+            //     $('#callbackP').hide(3000);
+            //     alert('hello callback'); //結果:先alert才隱藏
+            // })
+
+            // 寫法二:
+            $('#callbackBtn').click(()=>{
+                console.log();
+                $('#callbackP').hide('slow',()=>{
+                    alert('hello callback');  //結果:先隱藏才alert
+                });
+            })
+        
+            // 抓 js 時間 / js windows.滑鼠座標
+            
+    });
+    </script>
+</body>
+
+</html>
