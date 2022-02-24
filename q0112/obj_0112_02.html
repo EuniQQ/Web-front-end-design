@@ -86,7 +86,7 @@
             console.log(data[2].name + '薪水是' + data[2].salary)
 
             // js的迴圈寫法:(data要在上面)
-            
+
             // for (let i = 0; i < array.length; i++) {
             //     str = i + "is" + myArr[i];
             //     console.log('i')
@@ -94,22 +94,22 @@
 
 
             // for
-            for (let i = 0; i <3; i++) {
+            for (let i = 0; i < 3; i++) {
 
-                projectLength=data[i].project.length
-                
+                projectLength = data[i].project.length
+
                 projectLengthString = " ";
-                for (let j = 0 ; j < projectLength ; j++){
-                projectLengthString = projectLengthString + ' ' + data[i].project[j];
+                for (let j = 0; j < projectLength; j++) {
+                    projectLengthString = projectLengthString + ' ' + data[i].project[j];
                 }
 
                 data[i].bxp = data[i].bonus * data[i].project.length;
-                data[i].sum = data[i].bxp + data[i].salary 
+                data[i].sum = data[i].bxp + data[i].salary
 
-                dataString=`data[${i}]`;
-                console.log(dataString,data[i]);
+                dataString = `data[${i}]`;
+                console.log(dataString, data[i]);
 
-                console.log('projectLengthString',projectLengthString);
+                console.log('projectLengthString', projectLengthString);
 
                 // code
                 tbodyString = `
@@ -133,24 +133,24 @@
 
             //總共要發多少薪水
             // 寫法一；
-            var total=0;
-            for(let i =0 ; i<data.length ; i++){
+            var total = 0;
+            for (let i = 0; i < data.length; i++) {
                 total = data[i].sum;
             }
-            console.log ('total',total);
-            
+            console.log('total', total);
+
             // 寫法二；
             //使用 js reduce()
-            totalArr=[
+            totalArr = [
                 data[0].sum,
                 data[1].sum,
-                data[2].sum,   
+                data[2].sum,
             ]
-            total=totalArr.reduce(getSum,0);
-            function getSum(total,num){
+            total = totalArr.reduce(getSum, 0);
+            function getSum(total, num) {
                 return total + num;
             }
-            console.log('total',total);
+            console.log('total', total);
 
         });
 
